@@ -1,11 +1,8 @@
-<!-- form for user submission -->
-<!-- name, email, dollar amount -->
-<!-- donation for single or per lap
-table for donor's submission info
-button for donate
-button for cancel to clear form
 
- -->
+<!-- table for donor's submission info
+button for donate
+button for cancel to clear form -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +10,9 @@ button for cancel to clear form
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>
 	</title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="/myown.css">
+	<script src="/private.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="/return.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 <body>
 	<section>
@@ -21,9 +20,27 @@ button for cancel to clear form
 		<input type="text" name="fullname" value="" placeholder="">
 		<label for="useremail">Email Address</label>
 		<input type="email" name="useremail" value="" placeholder="">
-		<label for="money">Donation Amount</label>
-		input
-		
+		<label for="money">Donation Amount:</label>
+		<input type="radio" name="donation" value="" placeholder="" checked>Single Donation
+		<input type="radio" name="donation" value="" placeholder="">Per Lap
+		<input type="text" name="" value="" placeholder="$$.$$">
+		<button type="submit">Donate</button>
+		<button type="cancel">Cancel</button>
+	</section>	
+	<section>
+		<table>
+			<caption>Donations</caption>
+			<thead>
+				<tr>
+					<th>Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>data</td>
+				</tr>
+			</tbody>
+		</table>
 	</section>
 </body>
 </html>
