@@ -1,5 +1,5 @@
 
-var Donations = (function (){
+var donations = (function (){
 	var info = [
 		{name: "Jack",
 		pledge: 50,
@@ -22,14 +22,6 @@ var Donations = (function (){
 		frequency: "per lap"}
 	];
 
-	return{
-		getInfo: function(){
-			return info;
-		},
-		setInfo: function (newData){
-			info.push(newData);
-		}
-	};
 
 
 })(Donations);
