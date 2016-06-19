@@ -2,14 +2,14 @@
 
 var Donations = (function (){
 
-	var info;
+	var input;
 
 		return{
-		getInfo: function(){
-			return info;
+		getInput: function(){
+			return input;
 		},
 
-		setInfo: function addDonor(newData){
+		setInput: function addDonor(newData){
 			info.push(newData);
 		}
 	};

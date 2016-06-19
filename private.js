@@ -1,5 +1,5 @@
 
-var donations = (function (){
+var Donations = (function (oldDonations){
 	var info = [
 		{name: "Jack",
 		pledge: 50,
