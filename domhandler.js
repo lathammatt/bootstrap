@@ -15,13 +15,7 @@ button.addEventListener("click", function tally(){
 	console.log("event", event);
 	newDonor.name = userName.value;
 	newDonor.email = userEmail.value;
-	newDonor.pledge = amount.value;
-	// for (var i = 0; i < radios.length; i++) {
- //    if (radios[i].checked) {
- //    	console.log("radio", radios[i].checked)
- //    	newDonor.frequency = radios[i].checked.value;
- //        break;
- //    };
+	newDonor.pledge = parseInt(amount.value);
     if (document.getElementById('r1').checked) {
   	newDonor.frequency = document.getElementById("r1").value;
 	} else {newDonor.frequency = document.getElementById("r2").value;}
