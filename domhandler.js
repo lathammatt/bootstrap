@@ -15,7 +15,7 @@ button.addEventListener("click", function tally(){
 	console.log("event", event);
 	newDonor.name = userName.value;
 	newDonor.email = userEmail.value;
-	newDonor.pledge = parseInt(amount.value);
+	newDonor.pledge = parseFloat(amount.value);
     if (document.getElementById('r1').checked) {
   	newDonor.frequency = document.getElementById("r1").value;
 	} else {newDonor.frequency = document.getElementById("r2").value;}
