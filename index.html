@@ -1,7 +1,6 @@
 
 <!-- table for donor's submission info
-button for donate
-button for cancel to clear form -->
+button for donate-->
 
 <!DOCTYPE html>
 <html>
@@ -11,21 +10,22 @@ button for cancel to clear form -->
 	<title>
 	</title>
 	<link rel="stylesheet" href="/myown.css">
+	<script src="/domhandler.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="/private.js" type="text/javascript" charset="utf-8" async defer></script>
 	<script src="/return.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 <body>
 	<section>
 		<label for="fullname">Name</label>
-		<input type="text" name="fullname" value="" placeholder="">
+		<input type="text" name="fullname" id="custname" value="" placeholder="">
 		<label for="useremail">Email Address</label>
-		<input type="email" name="useremail" value="" placeholder="">
+		<input type="email" name="useremail" id="custemail" value="" placeholder="">
 		<label for="money">Donation Amount:</label>
-		<input type="radio" name="donation" value="" placeholder="" checked>Single Donation
-		<input type="radio" name="donation" value="" placeholder="">Per Lap
-		<input type="text" name="" value="" placeholder="$$.$$">
-		<button type="submit">Donate</button>
-		<button type="cancel">Cancel</button>
+		<input type="radio" id="r1" name="donation" value="single" placeholder="" checked>Single Donation
+		<input type="radio" id="r2" name="donation" value="per lap" placeholder="">Per Lap
+		<input type="text" id="money" name="" value="" placeholder="$$.$$">
+		<button type="submit" id="donbut">Donate</button>
+		<button type="cancel" id="canbut">Cancel</button>
 	</section>	
 	<section>
 		<table>
