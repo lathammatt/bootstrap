@@ -26,11 +26,9 @@ var Donations = (function (oldDonations) {
 		pledge: 0.10,
 		frequency: "per lap"}
 	];
-	console.log("TESTING", info);
 	tableOut(info);
 	return info;
 
 
 })(Donations || {});
 
-console.log("We are here", Donations);

@@ -19,8 +19,6 @@ button.addEventListener("click", function tally(){
   	newDonor.frequency = document.getElementById("r1").value;
 	} else {newDonor.frequency = document.getElementById("r2").value;}
 	main.setInput(newDonor);
-	console.log("new", newDonor);
-	tableOut(newDonor);
 });
 
 
@@ -31,13 +29,12 @@ cancel.addEventListener("click", function clear(){
 });
 
 function tableOut (object){
-	console.log("DOMhandler", Donations);
+	console.log("DOMhandler", object);
 	for (var i = 0; i < object.length; i++) {
 		var tabRow = document.createElement("tr");
 		document.getElementById("display").appendChild(tabRow);
 		var tabName = document.createElement("td");
 		tabName.appendChild(document.createTextNode(object[i].name));
-		console.log("name", object[i].name);
 		tabRow.appendChild(tabName);
 		var tabMoney = document.createElement("td");
 		tabMoney.appendChild(document.createTextNode(object[i].pledge));
@@ -45,7 +42,7 @@ function tableOut (object){
 		var tabFreq = document.createElement("td");
 		tabFreq.appendChild(document.createTextNode(object[i].frequency));
 		tabRow.appendChild(tabFreq);
-	}
+	};
 };
 
 

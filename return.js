@@ -1,4 +1,3 @@
-// addDonor method, argument the array
 
 var main = (function (){
 
