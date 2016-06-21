@@ -19,6 +19,7 @@ button.addEventListener("click", function tally(){
   	newDonor.frequency = document.getElementById("r1").value;
 	} else {newDonor.frequency = document.getElementById("r2").value;}
 	Donations.setInput(newDonor);
+	Donations.tableout(newDonor)
 });
 console.log("new", newDonor);
 
@@ -27,8 +28,23 @@ cancel.addEventListener("click", function clear(){
 	userName.value = "";
 	userEmail.value = "";
 	amount.value = "";
-})
+});
 
+function tableOut (object){
+	for (var i = 0; i < object.info.length; i++) {
+		var tabRow = document.createElement("tr");
+		document.getElementById("display").appendChild(tabRow);
+		var tabName = document.createElement("td");
+		tabName.appendChild(document.createTextNode(object.info[i].name));
+		tabRow.appendChild(tabName);
+		var tabMoney = document.createElement("td");
+		tabMoney.appendChild(document.createTextNode(object.info[i].pledge));
+		tabRow.appendChild(tabMoney);		
+		var tabFreq = document.createElement("td");
+		tabFreq.appendChild(document.createTextNode(object.info[i].frequency));
+		tabRow.appendChild(tabFreq);
+	}
+};
 
 
 

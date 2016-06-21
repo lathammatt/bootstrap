@@ -10,8 +10,9 @@ var Donations = (function (){
 		},
 
 		setInput: function addDonor(newData){
-			Donations.push(newData);
+			Donations.info.push(newData);
 		}
 	};
+	return Donations;
 
-})();
+})(Donations || {});
