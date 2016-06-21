@@ -1,6 +1,5 @@
-// addDonor method, argument the array
 
-var Donations = (function (){
+var main = (function (){
 
 	var input;
 
@@ -10,7 +9,13 @@ var Donations = (function (){
 		},
 
 		setInput: function addDonor(newData){
-			Donations.info.push(newData);
+			console.log("HELLO", Donations);
+			Donations.push(newData);
+			var clearSpot = document.getElementById("display");
+			while (clearSpot.firstChild) {
+    		clearSpot.removeChild(clearSpot.firstChild);
+				}
+			tableOut(Donations);
 		}
 	};
 	return Donations;
