@@ -18,10 +18,10 @@ button.addEventListener("click", function tally(){
     if (document.getElementById('r1').checked) {
   	newDonor.frequency = document.getElementById("r1").value;
 	} else {newDonor.frequency = document.getElementById("r2").value;}
-	Donations.setInput(newDonor);
-	Donations.tableout(newDonor)
+	main.setInput(newDonor);
+	console.log("new", newDonor);
+	tableOut(newDonor);
 });
-console.log("new", newDonor);
 
 
 cancel.addEventListener("click", function clear(){
@@ -31,17 +31,19 @@ cancel.addEventListener("click", function clear(){
 });
 
 function tableOut (object){
-	for (var i = 0; i < object.info.length; i++) {
+	console.log("DOMhandler", Donations);
+	for (var i = 0; i < object.length; i++) {
 		var tabRow = document.createElement("tr");
 		document.getElementById("display").appendChild(tabRow);
 		var tabName = document.createElement("td");
-		tabName.appendChild(document.createTextNode(object.info[i].name));
+		tabName.appendChild(document.createTextNode(object[i].name));
+		console.log("name", object[i].name);
 		tabRow.appendChild(tabName);
 		var tabMoney = document.createElement("td");
-		tabMoney.appendChild(document.createTextNode(object.info[i].pledge));
+		tabMoney.appendChild(document.createTextNode(object[i].pledge));
 		tabRow.appendChild(tabMoney);		
 		var tabFreq = document.createElement("td");
-		tabFreq.appendChild(document.createTextNode(object.info[i].frequency));
+		tabFreq.appendChild(document.createTextNode(object[i].frequency));
 		tabRow.appendChild(tabFreq);
 	}
 };

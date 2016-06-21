@@ -1,5 +1,5 @@
 
-var Donations = (function (oldDonations){
+var Donations = (function (oldDonations) {
 	var info = [
 		{name: "Jack",
 		email: "blah@gmail.com",
@@ -26,7 +26,11 @@ var Donations = (function (oldDonations){
 		pledge: 0.10,
 		frequency: "per lap"}
 	];
-	return oldDonations;
+	console.log("TESTING", info);
+	tableOut(info);
+	return info;
 
 
 })(Donations || {});
+
+console.log("We are here", Donations);
