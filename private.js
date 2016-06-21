@@ -26,7 +26,7 @@ var Donations = (function (oldDonations){
 		pledge: 0.10,
 		frequency: "per lap"}
 	];
+	return oldDonations;
 
 
-
-})(Donations);
+})(Donations || {});
