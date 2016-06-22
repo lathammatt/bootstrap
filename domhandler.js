@@ -10,8 +10,8 @@ var button = document.getElementById("donbut");
 var cancel = document.getElementById("canbut");	
 
 
-var newDonor = {};
 button.addEventListener("click", function tally(){
+	var newDonor = {};
 	newDonor.name = userName.value;
 	newDonor.email = userEmail.value;
 	newDonor.pledge = parseFloat(amount.value);

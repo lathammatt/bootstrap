@@ -1,5 +1,32 @@
-/*bootstrap for table on left, form on right with space on sides at desktop
-same for tablet but no space on sides
-for mobile/vertical-tablet table above form
-table entries alternatively striped*/
 
+
+input {
+	display: block;
+	padding: 2px;
+}
+
+label {
+	padding-top:2px;
+}
+
+#input {
+	padding: 3px 0 3px 0;
+}
+
+.make-lg-column(@columns; @gutter: @grid-gutter-width) {
+	padding-left:  (@gutter / 2);
+    padding-right: (@gutter / 2);
+}
+
+.make-md-column(@columns; @gutter: @grid-gutter-width) {
+	padding-left:  (@gutter / 0);
+    padding-right: (@gutter / 0);
+}
+
+td, th {
+	padding: 0 10px 0 5px;
+}
+
+button {
+	margin: 3px 3px 3px 0;
+}
